@@ -1,12 +1,9 @@
-# Astro Starter Kit: Basics
+# Personal portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+## about this project
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+the purpose of this project is make me visible and show some information about me. This project is inspire in the [Yanka Darelova](https://www.behance.net/darelova) portfolio design.
+you can find the original design in Figma [portfolio'design files](<https://www.figma.com/design/y2E1xYKlBi6buDol4eJyxE/Portfolio-for-Developers-Concept-V.2-(Community)?node-id=0-1&node-type=canvas&t=F4oV9k5mJ4PkyMas-0>)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
@@ -43,6 +40,9 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## technologies
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Astro.JS
+- React.JS
+- Vue.JS
+- TailwindCSS

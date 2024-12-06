@@ -18,6 +18,14 @@ export default {
 			
 			"lines": "#1E2D3D",
 		},
+		fontSize: {
+			"headline-text": ["62px"],
+			"subheadline-text": ["32px"],
+
+			body: ["18px"],
+			labels: ["16px"],
+			"code-snippets": ["14px"]
+		},
 		extend: {},
 	},
 	plugins: [],

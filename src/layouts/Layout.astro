@@ -1,11 +1,11 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import EditorBox from "@components/EditorBox.astro"
 import Menu from "@components/Menu"
 import Footer from "@components/Footer.astro"
 import {type MenuOptions} from "@interfaces/menu"
 
 const {pathname} = Astro.url
-console.log("pathname: ", pathname)
 ---
 
 <!doctype html>
@@ -16,6 +16,7 @@ console.log("pathname: ", pathname)
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Franklin Rodriguez - FullStack Developer</title>
+    <ClientRouter />
   </head>
     <EditorBox>
       <Menu client:only="react" option={pathname as unknown as MenuOptions}/>

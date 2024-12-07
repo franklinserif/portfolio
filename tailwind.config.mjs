@@ -13,8 +13,8 @@ export default {
       'secondary-green': '#3C9D93',
       'secondary-blue': '#4D5BCE',
 
-      'accent-orange2': '#FEA55F',
       'accent-green': '#43D9AD',
+      'accent-orange': '#FEA55F',
       'accent-salmon': '#E99287',
       'accent-violet': '#C98BDF',
 

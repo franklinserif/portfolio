@@ -1,0 +1,51 @@
+<div class="h-full w-full flex flex-col mt-[20%] md:ml-[20%] justify-between md:justify-center gap-5">
+    <div class="flex flex-col items-start diple">
+        <span class="text-white text-body">Hi all, I am</span>
+        <h1 class="text-white text-headline-text">Franklin Rodriguez</h1>
+        <h2 class="text-accent-green md:text-secondary-blue anim-typewriter max-w-fit text-body md:text-subheadline-text border-r border-r-secondary overflow-hidden whitespace-nowrap pr-1"> > FullStack Developer</h2>
+      </div>
+
+      <div class="flex flex-col items-start mb-[40%] mt-[61px]">
+        <span class="text-secondary text-snippets pb-1 hidden md:block">// complete the game to continue</span>
+        <span class="text-secondary text-snippets pb-3">// you can also se it on my github page</span>
+        
+        <a class="text-labels text-snippets">
+          <span class="text-secondary-blue">
+              const
+          </span>
+          <span class="text-accent-green">
+              github
+          </span>
+          <span class="text-white">
+              = 
+          </span>
+          <span class="text-accent-salmon">
+              "https://github.com/franklinsrr"
+          </span>
+        </a>
+      </div>
+</div>
+
+<style>
+    .anim-typewriter{
+        animation: typewriter 3.5s steps(40) 1s 1 normal both,
+        blinkTextCursor 800ms steps(40) infinite normal;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to{
+            width: 100%;
+        }
+    }
+    @keyframes blinkTextCursor {
+        from {
+            border-right-color: rba(255, 255, 255, .75);
+        }
+        to {
+            border-right-color: transparent;
+        }
+    }
+</style>

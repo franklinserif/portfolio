@@ -2,7 +2,7 @@ import { type FC, useState } from 'react'
 import clsx from 'clsx'
 
 interface Props {
-  option: '_hello' | '_about-me' | '_projects' | '_contact-me'
+  option: '/' | '/about-me' | '/projects' | '/contact-me'
 }
 
 const Menu: FC<Props> = ({ option }) => {
@@ -21,11 +21,11 @@ const Menu: FC<Props> = ({ option }) => {
         </li>
         <li>
           <a
-            href=""
+            href="/"
             className={clsx(
               'h-[50px] px-6 border-r border-b-lines border-r-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
               {
-                'border-b-accent-orange2 border-b-2': option === '_hello',
+                '!border-b-accent-orange border-b-2 ': option === '/',
               }
             )}
           >
@@ -34,10 +34,10 @@ const Menu: FC<Props> = ({ option }) => {
         </li>
         <li>
           <a
-            href=""
+            href="/about-me"
             className={clsx(
               'h-[50px] border-r px-6 border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
-              { 'border-b-accent-orange2 border-b-2': option === '_about-me' }
+              { '!border-b-accent-orange border-b-2': option === '/about-me' }
             )}
           >
             _about-me
@@ -45,10 +45,10 @@ const Menu: FC<Props> = ({ option }) => {
         </li>
         <li>
           <a
-            href=""
+            href="/projects"
             className={clsx(
               'h-[50px] border-r px-6 border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
-              { 'border-b-accent-orange2 border-b-2': option === '_projects' }
+              { '!border-b-accent-orange border-b-2': option === '/projects' }
             )}
           >
             _projects
@@ -56,10 +56,10 @@ const Menu: FC<Props> = ({ option }) => {
         </li>
         <li className="ml-auto">
           <a
-            href=""
+            href="/contact-me"
             className={clsx(
               'h-[50px] border-l px-6 ml-auto border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
-              { 'border-b-accent-orange2 border-b-2': option === '_contact-me' }
+              { '!border-b-accent-orange border-b-2': option === '/contact-me' }
             )}
           >
             _contact-me
@@ -67,7 +67,7 @@ const Menu: FC<Props> = ({ option }) => {
         </li>
       </ul>
 
-      <ul className="lg:hidden flex items-center justify-between text-secondary h-[64px] text-center text-snippets border-y border-y-lines">
+      <ul className="lg:hidden flex flex-wrap items-center justify-between text-secondary h-[64px] text-center text-snippets border-y border-y-lines">
         <li>
           <a href="" className="h-[64px] flex justify-center items-center px-5">
             Franklin Rodriguez
@@ -86,16 +86,18 @@ const Menu: FC<Props> = ({ option }) => {
         </li>
         <li
           className={clsx(
-            'block absolute top-[64px] bottom-0 left-0 right-0 bg-primary',
-            { hidden: !isResponsiveMenuOpen }
+            'block w-full top-[64px] bottom-[1400px] left-0 right-0',
+            {
+              hidden: !isResponsiveMenuOpen,
+            }
           )}
         >
-          <ul className="text-labels">
+          <ul className="text-labels absolute z-50 top-[64px] bottom-[42px] 0 left-0 right-0 bg-primary">
             <li
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '_hello',
+                  'text-white': option === '/',
                 }
               )}
             >
@@ -107,7 +109,7 @@ const Menu: FC<Props> = ({ option }) => {
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '_about-me',
+                  'text-white': option === '/about-me',
                 }
               )}
             >
@@ -117,7 +119,7 @@ const Menu: FC<Props> = ({ option }) => {
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '_projects',
+                  'text-white': option === '/projects',
                 }
               )}
             >
@@ -127,7 +129,7 @@ const Menu: FC<Props> = ({ option }) => {
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '_contact-me',
+                  'text-white': option === '/contact-me',
                 }
               )}
             >

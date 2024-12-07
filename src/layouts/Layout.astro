@@ -2,7 +2,10 @@
 import EditorBox from "@components/EditorBox.astro"
 import Menu from "@components/Menu"
 import Footer from "@components/Footer.astro"
+import {type MenuOptions} from "@interfaces/menu"
 
+const {pathname} = Astro.url
+console.log("pathname: ", pathname)
 ---
 
 <!doctype html>
@@ -15,8 +18,10 @@ import Footer from "@components/Footer.astro"
     <title>Franklin Rodriguez - FullStack Developer</title>
   </head>
     <EditorBox>
-      <Menu client:visible option="_hello"/>
-      <slot />
+      <Menu client:only="react" option={pathname as unknown as MenuOptions}/>
+      <main class="h-full">
+        <slot />
+      </main>
       <Footer/>
     </EditorBox>
 </html>

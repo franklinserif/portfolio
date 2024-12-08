@@ -11,16 +11,16 @@ const {pathname} = Astro.url;
             <a href="/about-me/professional-info">
                 <img src="/icons/terminal-icon.svg" alt="professional info" class={clsx("h-[20px] w-[20px] opacity-40 hover:opacity-100", 
                     {
-                        "!opacity-100": pathname === "/about-me/professional-info"
+                        "!opacity-100": pathname.includes( "/about-me/professional-info")
                     }
                 )}>
             </a>
         </li>
         <li>
-            <a href="/about-me">
+            <a href="/about-me/personal-info">
                 <img src="/icons/circle-icon.svg" alt="about me" class={clsx("h-[20px] w-[20px] opacity-40 hover:opacity-100",
                     {
-                     "!opacity-100": pathname === "/about-me"
+                     "!opacity-100": pathname.includes("/about-me/personal-info")
                     }
                 )}>
             </a>
@@ -29,7 +29,7 @@ const {pathname} = Astro.url;
             <a href="/about-me/hobbies-info">
                 <img src="/icons/game-icon.svg" alt="/hobbies-info" class={clsx("h-[20px] w-[20px] opacity-40 hover:opacity-100", 
                     {
-                        "!opacity-100": pathname === "/about-me/hobbies-info"
+                        "!opacity-100": pathname.includes( "/about-me/hobbies-info")
                     }
                 )}>
             </a>

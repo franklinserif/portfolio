@@ -19,7 +19,7 @@ const {pathname} = Astro.url
     <ClientRouter />
   </head>
     <EditorBox>
-      <Menu client:only="react" option={pathname as unknown as MenuOptions}/>
+      <Menu client:only="react" pathname={pathname as unknown as MenuOptions}/>
       <main class="h-full">
         <slot />
       </main>

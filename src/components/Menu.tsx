@@ -1,11 +1,12 @@
 import { type FC, useState } from 'react'
+import type { MenuOptions } from '@interfaces/menu'
 import clsx from 'clsx'
 
 interface Props {
-  option: '/' | '/about-me' | '/projects' | '/contact-me'
+  pathname: MenuOptions
 }
 
-const Menu: FC<Props> = ({ option }) => {
+const Menu: FC<Props> = ({ pathname }) => {
   const [isResponsiveMenuOpen, setIsResponsiveMenuOpen] = useState(false)
 
   return (
@@ -25,7 +26,7 @@ const Menu: FC<Props> = ({ option }) => {
             className={clsx(
               'h-[50px] px-6 border-r border-b-lines border-r-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
               {
-                '!border-b-accent-orange border-b-2 ': option === '/',
+                '!border-b-accent-orange border-b-2 ': pathname === '/',
               }
             )}
           >
@@ -34,10 +35,13 @@ const Menu: FC<Props> = ({ option }) => {
         </li>
         <li>
           <a
-            href="/about-me"
+            href="/about-me/personal-info"
             className={clsx(
               'h-[50px] border-r px-6 border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
-              { '!border-b-accent-orange border-b-2': option === '/about-me' }
+              {
+                '!border-b-accent-orange border-b-2':
+                  pathname.includes('/about-me'),
+              }
             )}
           >
             _about-me
@@ -48,7 +52,7 @@ const Menu: FC<Props> = ({ option }) => {
             href="/projects"
             className={clsx(
               'h-[50px] border-r px-6 border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
-              { '!border-b-accent-orange border-b-2': option === '/projects' }
+              { '!border-b-accent-orange border-b-2': pathname === '/projects' }
             )}
           >
             _projects
@@ -59,7 +63,10 @@ const Menu: FC<Props> = ({ option }) => {
             href="/contact-me"
             className={clsx(
               'h-[50px] border-l px-6 ml-auto border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
-              { '!border-b-accent-orange border-b-2': option === '/contact-me' }
+              {
+                '!border-b-accent-orange border-b-2':
+                  pathname === '/contact-me',
+              }
             )}
           >
             _contact-me
@@ -97,7 +104,7 @@ const Menu: FC<Props> = ({ option }) => {
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '/',
+                  'text-white': pathname === '/',
                 }
               )}
             >
@@ -109,7 +116,7 @@ const Menu: FC<Props> = ({ option }) => {
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '/about-me',
+                  'text-white': pathname === '/about-me',
                 }
               )}
             >
@@ -119,7 +126,7 @@ const Menu: FC<Props> = ({ option }) => {
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '/projects',
+                  'text-white': pathname === '/projects',
                 }
               )}
             >
@@ -129,7 +136,7 @@ const Menu: FC<Props> = ({ option }) => {
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
-                  'text-white': option === '/contact-me',
+                  'text-white': pathname === '/contact-me',
                 }
               )}
             >

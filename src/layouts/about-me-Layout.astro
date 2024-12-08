@@ -1,11 +1,15 @@
 ---
 import Layout from "./Layout.astro";
 import IconsMenu from "@components/Icons-menu.astro";
+import SubMenu from "@components/SubMenu";
+
+const {pathname} = Astro.url;
 ---
 
 <Layout>
-    <section class="h-full w-full">
+    <section class="h-full w-full flex">
         <IconsMenu/>
+        <SubMenu client:only="react" pathname={pathname}/>
         <slot/>
     </section>
 </Layout>

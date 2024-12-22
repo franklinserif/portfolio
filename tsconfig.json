@@ -10,7 +10,8 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@interfaces/*": ["src/interfaces/*"],
-      "@constants/*": ["src/constants/*"]
+      "@constants/*": ["src/constants/*"],
+      "@libs/*": ["src/libs/*"]
     }
   }
 }

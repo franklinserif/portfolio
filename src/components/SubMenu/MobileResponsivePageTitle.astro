@@ -1,0 +1,11 @@
+---
+const {pathname} = Astro.url;
+
+const pageTitle  = pathname?.split('/')[1]
+---
+
+<div class="w-full md:hidden h-[70px] px-[25px] flex items-center">
+    <span class="text-white">
+        _{pageTitle}
+    </span>
+</div>

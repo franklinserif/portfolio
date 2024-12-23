@@ -1,7 +1,13 @@
-<div class="h-[35px] flex items-center border-b  border-b-lines w-full">
+---
+const {pathname} = Astro.url;
+
+const pageTitle = pathname.split("/")[2];
+---
+
+<div class="h-[35px] flex items-center border-b  border-b-lines w-full pt-[2px]">
     <section class="h-full border-r border-r-lines px-4 w-[50%]">
         <span class="text-secondary text-snippets">
-            personal-info 
+            {pageTitle}
         </span>
         <span class="text-secondary text-snippets ml-2">
             x

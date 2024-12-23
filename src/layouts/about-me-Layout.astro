@@ -3,6 +3,7 @@ import Layout from "./Layout.astro";
 import IconsMenu from "@components/Icons-menu.astro";
 import SubMenu from "@components/SubMenu/SubMenu";
 import MobileResponsivePageTitle from "@components/SubMenu/MobileResponsivePageTitle.astro";
+import HeadAboutMeLayout from "@components/HeadAboutMeLayout.astro"
 
 const {pathname} = Astro.url;
 ---
@@ -12,6 +13,9 @@ const {pathname} = Astro.url;
         <MobileResponsivePageTitle/>
         <IconsMenu/>
         <SubMenu client:only="react" pathname={pathname}/>
-        <slot/>
+        <div class="w-full">
+            <HeadAboutMeLayout/>
+            <slot/>
+        </div>
     </section>
 </Layout>

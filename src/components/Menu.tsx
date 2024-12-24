@@ -26,7 +26,8 @@ const Menu: FC<Props> = ({ pathname }) => {
             className={clsx(
               'h-[50px] px-6 border-r border-b-lines border-r-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
               {
-                '!border-b-accent-orange border-b-2 ': pathname === '/',
+                '!border-b-accent-orange border-b-2 text-white':
+                  pathname === '/',
               }
             )}
           >

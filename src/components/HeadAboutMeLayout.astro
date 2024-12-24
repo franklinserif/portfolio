@@ -3,17 +3,25 @@ const {pathname} = Astro.url;
 
 const pageTitle = pathname.split("/")[2];
 ---
-
-<div class="h-[35px] flex items-center border-b  border-b-lines w-full pt-[2px]">
-    <section class="h-full border-r border-r-lines px-4 w-[50%] box-content">
-        <span class="text-secondary text-snippets">
-            {pageTitle}
-        </span>
-        <span class="text-secondary text-snippets ml-2">
-            x
-        </span>
-    </section>
-    <section class="h-full w-[50%]">
-
-    </section>
+<div class="h-full flex">
+    <div class="h-full w-[50%] flex-col">
+        <div class="h-[35px] w-full flex items-center border-b  border-b-lines border-r border-r-lines pt-[2px]">
+            <section class="h-full border-r border-r-lines px-4 box-content">
+                <span class="text-secondary text-snippets">
+                    {pageTitle}
+                </span>
+                <span class="text-secondary text-snippets ml-2">
+                    x
+                </span>
+            </section>
+        </div>
+        <section class="w-full h-full flex">
+            <slot name="main-content"/>
+        </section>
+    </div>
+    <div class="h-full w-[50%]">
+        <div class="h-[35px] flex items-center border-b border-b-lines pt-[2px]">
+        </div>
+        <slot name="side-content"/>
+    </div>
 </div>

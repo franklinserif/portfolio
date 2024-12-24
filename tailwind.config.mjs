@@ -29,6 +29,7 @@ export default {
       body: ['18px'],
       labels: ['16px', '16px'],
       snippets: ['14px'],
+      'small-letter': ['12px'],
     },
     extend: {},
   },

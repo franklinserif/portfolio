@@ -16,7 +16,7 @@ const SubMenu: FC<Props> = ({ pathname }) => {
   const subMenuList = Object.entries(SUB_MENU)
 
   return (
-    <section className="w-full md:w-[291px] border-r border-r-lines">
+    <section className="min-w-[248px] border-r border-r-lines">
       <nav className="hidden md:block">
         <div className="h-[35px] border-b border-b-lines flex items-center">
           <img

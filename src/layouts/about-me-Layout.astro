@@ -5,6 +5,7 @@ import SubMenu from "@components/SubMenu/SubMenu";
 import MobileResponsivePageTitle from "@components/SubMenu/MobileResponsivePageTitle.astro";
 import HeadAboutMeLayout from "@components/HeadAboutMeLayout.astro"
 import StaticScrollbar from "@components/StaticScrollbar.astro";
+import Aside from "@components/Aside.astro";
 
 const {pathname} = Astro.url;
 ---
@@ -17,7 +18,7 @@ const {pathname} = Astro.url;
         <div class="w-full">
             <HeadAboutMeLayout>
                 <section class="h-full w-full flex" slot="main-content">
-                    <div class="w-full h-full">
+                    <div class="w-full h-full ">
                         <slot/>
                     </div>
                     <div class="h-full">
@@ -25,7 +26,8 @@ const {pathname} = Astro.url;
                     </div>
                 </section>
                 <div class="h-full" slot="aside-content">
-                    <section class="w-[49%] h-full">
+                    <section class="w-full h-full">
+                        <Aside/>
                     </section>
                 </div>
             </HeadAboutMeLayout>

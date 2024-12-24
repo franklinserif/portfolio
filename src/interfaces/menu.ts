@@ -4,6 +4,7 @@ export type TSubMenuOptions =
   | 'personal-info'
   | 'professional-info'
   | 'hobbies-info'
+  | 'contact-me'
 
 export interface ISubMenuOption {
   id: number

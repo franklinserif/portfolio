@@ -104,4 +104,5 @@ export const SUB_MENU: ISubMenu = {
   'personal-info': SUB_MENU_PERSONAL_INFO,
   'professional-info': SUB_MENU_PROFESSIONAL_INFO,
   'hobbies-info': SUB_MENU_HOBBIES_INFO,
+  'contact-me': SUB_MENU_CONTACT,
 }

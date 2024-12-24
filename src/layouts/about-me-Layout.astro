@@ -4,6 +4,7 @@ import IconsMenu from "@components/Icons-menu.astro";
 import SubMenu from "@components/SubMenu/SubMenu";
 import MobileResponsivePageTitle from "@components/SubMenu/MobileResponsivePageTitle.astro";
 import HeadAboutMeLayout from "@components/HeadAboutMeLayout.astro"
+import StaticScrollbar from "@components/StaticScrollbar.astro";
 
 const {pathname} = Astro.url;
 ---
@@ -15,7 +16,14 @@ const {pathname} = Astro.url;
         <SubMenu client:only="react" pathname={pathname}/>
         <div class="w-full">
             <HeadAboutMeLayout/>
-            <slot/>
+            <div class="w-full h-full flex">
+                <section class="w-[50%] h-full">
+                    <slot/>
+                </section>
+                <StaticScrollbar/>
+                <section class="w-[49%] h-full">
+                </section>
+            </div>
         </div>
     </section>
 </Layout>

@@ -15,15 +15,20 @@ const {pathname} = Astro.url;
         <IconsMenu/>
         <SubMenu client:only="react" pathname={pathname}/>
         <div class="w-full">
-            <HeadAboutMeLayout/>
-            <div class="w-full h-full flex">
-                <section class="w-[50%] h-full">
-                    <slot/>
+            <HeadAboutMeLayout>
+                <section class="h-full w-full flex" slot="main-content">
+                    <div class="w-full h-full">
+                        <slot/>
+                    </div>
+                    <div class="h-full">
+                        <StaticScrollbar/>
+                    </div>
                 </section>
-                <StaticScrollbar/>
-                <section class="w-[49%] h-full">
-                </section>
-            </div>
+                <div class="h-full" slot="aside-content">
+                    <section class="w-[49%] h-full">
+                    </section>
+                </div>
+            </HeadAboutMeLayout>
         </div>
     </section>
 </Layout>

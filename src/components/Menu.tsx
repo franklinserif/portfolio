@@ -39,7 +39,7 @@ const Menu: FC<Props> = ({ pathname }) => {
             className={clsx(
               'h-[50px] border-r px-6 border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
               {
-                '!border-b-accent-orange border-b-2':
+                '!border-b-accent-orange border-b-2 text-white':
                   pathname.includes('/about-me'),
               }
             )}
@@ -52,7 +52,10 @@ const Menu: FC<Props> = ({ pathname }) => {
             href="/projects"
             className={clsx(
               'h-[50px] border-r px-6 border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
-              { '!border-b-accent-orange border-b-2': pathname === '/projects' }
+              {
+                '!border-b-accent-orange border-b-2 text-white':
+                  pathname === '/projects',
+              }
             )}
           >
             _projects
@@ -64,7 +67,7 @@ const Menu: FC<Props> = ({ pathname }) => {
             className={clsx(
               'h-[50px] border-l px-6 ml-auto border-b border-b-lines border-lines flex items-center justify-center hover:text-white hover:bg-primary-hover',
               {
-                '!border-b-accent-orange border-b-2':
+                '!border-b-accent-orange border-b-2 text-white':
                   pathname === '/contact-me',
               }
             )}

@@ -1,17 +1,25 @@
 ---
-const {pathname} = Astro.url;
+import {getTitle} from "@libs/getTitle"
 
-const pageTitle = pathname.split("/")[2];
+const {pathname} = Astro.url;
+const titles = getTitle(pathname);
+
+const [pageTitle, seconLevelPageTitle] = titles
+
 ---
-<div class="h-full flex">
-    <div class="h-full w-[50%] flex-col">
-        <div class="h-[35px] w-full flex items-center border-b  border-b-lines border-r border-r-lines pt-[2px]">
-            <section class="h-full border-r border-r-lines px-4 box-content">
-                <span class="text-secondary text-snippets">
+<div class="h-full flex flex-wrap md:flex-nowrap pt-3 md:pt-0">
+    <div class="h-full w-full md:w-[50%] flex-col">
+        <div class="h-[35px] w-full flex items-center border-b md:border-b-lines md:border-r md:border-r-lines pt-[2px]">
+            <section class="h-full md:border-r md:border-r-lines px-4 box-content flex pt-2 items-center">
+                <span class="block md:hidden text-white mr-1">//</span>
+                <span class="text-white md:text-secondary text-snippets">
                     {pageTitle}
                 </span>
-                <span class="text-secondary text-snippets ml-2">
+                <span class="text-secondary text-snippets ml-2 hidden md:block">
                     x
+                </span>
+                <span class="block md:hidden text-secondary text-snippets ml-2">
+                    / {seconLevelPageTitle}
                 </span>
             </section>
         </div>
@@ -19,7 +27,7 @@ const pageTitle = pathname.split("/")[2];
             <slot name="main-content"/>
         </section>
     </div>
-    <div class="h-full w-[50%]">
+    <div class="h-full md:w-[50%]">
         <div class="h-[35px] flex items-center border-b border-b-lines pt-[2px]">
         </div>
         <slot name="side-content"/>

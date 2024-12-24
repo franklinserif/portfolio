@@ -3,8 +3,6 @@ function getTitle(pathname: string): string[] {
   const title = splitTitle[2]
   let subTitle = splitTitle[3]
 
-  console.log('split title: ', splitTitle)
-
   if (subTitle === undefined && title == 'personal-info') {
     subTitle = 'bio'
   } else if (subTitle === undefined && title === 'professional-info') {

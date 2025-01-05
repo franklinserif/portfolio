@@ -80,7 +80,10 @@ const Menu: FC<Props> = ({ pathname }) => {
 
       <ul className="lg:hidden flex flex-wrap items-center justify-between text-secondary h-[64px] text-center text-snippets border-y border-y-lines">
         <li>
-          <a href="" className="h-[64px] flex justify-center items-center px-5">
+          <a
+            href="/"
+            className="h-[64px] flex justify-center items-center px-5"
+          >
             Franklin Rodriguez
           </a>
         </li>
@@ -112,7 +115,7 @@ const Menu: FC<Props> = ({ pathname }) => {
                 }
               )}
             >
-              <a href="" className="">
+              <a href="/" className="">
                 _hello
               </a>
             </li>
@@ -124,7 +127,7 @@ const Menu: FC<Props> = ({ pathname }) => {
                 }
               )}
             >
-              <a href="">_about-me</a>
+              <a href="/about-me/personal-info">_about-me</a>
             </li>
             <li
               className={clsx(
@@ -134,7 +137,7 @@ const Menu: FC<Props> = ({ pathname }) => {
                 }
               )}
             >
-              <a href="">_projects</a>
+              <a href="/projects">_projects</a>
             </li>
             <li
               className={clsx(

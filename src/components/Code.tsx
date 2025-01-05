@@ -15,6 +15,7 @@ const Code: FC<Props> = ({ code }) => {
         customStyle={{
           background: 'transparent',
           fontSize: '13px',
+          overflow: 'hidden',
         }}
       >
         {code}

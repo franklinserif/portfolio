@@ -1,11 +1,11 @@
 ---
-import { ClientRouter } from 'astro:transitions';
-import EditorBox from "@components/EditorBox.astro"
-import Menu from "@components/Menu"
-import Footer from "@components/Footer.astro"
-import {type MenuOptions} from "@interfaces/menu"
+import { ClientRouter } from 'astro:transitions'
+import EditorBox from '@components/EditorBox.astro'
+import Menu from '@components/Menu'
+import Footer from '@components/Footer.astro'
+import { type MenuOptions } from '@interfaces/menu'
 
-const {pathname} = Astro.url
+const { pathname } = Astro.url
 ---
 
 <!doctype html>
@@ -18,64 +18,64 @@ const {pathname} = Astro.url
     <title>Franklin Rodriguez - FullStack Developer</title>
     <ClientRouter />
   </head>
-    <EditorBox>
-      <Menu client:only="react" pathname={pathname as unknown as MenuOptions}/>
-      <main class="h-full">
-        <slot />
-      </main>
-      <Footer/>
-    </EditorBox>
+  <EditorBox>
+    <Menu client:only="react" pathname={pathname as unknown as MenuOptions} />
+    <main class="h-full">
+      <slot />
+    </main>
+    <Footer />
+  </EditorBox>
 </html>
 
 <style>
   @font-face {
-    font-family: "Fire Code Regular";
-    src: url("/fonts/FiraCode-Regular.woff2") format("woff2");
+    font-family: 'Fire Code Regular';
+    src: url('/fonts/FiraCode-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Fire Code Light";
-    src: url("/fonts/FiraCode-Light.woff2") format("woff2");
+    font-family: 'Fire Code Light';
+    src: url('/fonts/FiraCode-Light.woff2') format('woff2');
     font-weight: lighter;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Fire Code Medium";
-    src: url("/fonts/FiraCode-Medium.woff2") format("woff2");
+    font-family: 'Fire Code Medium';
+    src: url('/fonts/FiraCode-Medium.woff2') format('woff2');
     font-weight: Medium;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Fire Code SemiBold";
-    src: url("/fonts/FiraCode-SemiBold.woff2") format("woff2");
+    font-family: 'Fire Code SemiBold';
+    src: url('/fonts/FiraCode-SemiBold.woff2') format('woff2');
     font-weight: Medium;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Fire Code Bold";
-    src: url("/fonts/FiraCode-Bold.woff2") format("woff2");
+    font-family: 'Fire Code Bold';
+    src: url('/fonts/FiraCode-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Fire Code VF";
-    src: url("/fonts/FiraCode-VF.woff2") format("woff2");
+    font-family: 'Fire Code VF';
+    src: url('/fonts/FiraCode-VF.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
-  html{
+  html {
     margin: 30px;
     height: -webkit-fill-available;
     height: -moz-available;
@@ -83,19 +83,18 @@ const {pathname} = Astro.url
     width: -webkit-fill-available;
     width: -moz-available;
     width: stretch;
-    background-color: #010C15;
+    background-color: #010c15;
   }
 
-  @media (max-width: 1024px){
-    html{
+  @media (max-width: 1024px) {
+    html {
       margin: 15px;
     }
   }
 
-
   html,
   body {
-    font-family: "Fire Code Regular", monospace;
+    font-family: 'Fire Code Regular', monospace;
     font-size: 18px;
   }
 </style>

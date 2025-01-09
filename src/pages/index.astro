@@ -1,80 +1,86 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import SnakeGame from "@components/SnakeGame.vue";
-import WelcomeText from "@components/Welcome-Text.astro";
-
+import Layout from '@layouts/Layout.astro'
+import SnakeGame from '@components/SnakeGame.vue'
+import WelcomeText from '@components/Welcome-Text.astro'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout >
+<Layout>
   <div class="flex items-center h-full w-full">
     <div class="css-blurry-gradient-blue"></div>
     <div class="css-blurry-gradient-green"></div>
 
     <section class="w-[100%] md:w-[50%] px-4 md:px-0 h-full">
-      <WelcomeText/>
+      <WelcomeText />
     </section>
-    <section class="w-[50%] h-full hidden lg:flex items-center ml-[10%] relative z-20">
-      <SnakeGame client:only="vue"/>
+    <section
+      class="w-[50%] h-full hidden lg:flex items-center ml-[10%] relative z-20"
+    >
+      <SnakeGame client:only="vue" />
     </section>
   </div>
 </Layout>
 
 <style>
-
-.css-blurry-gradient-blue {
-  position: fixed;
-  bottom: 25%;
-  right: 5%;
-  width: 300px;
-  height: 300px;
-	border-radius: 0% 0% 50% 50%;
-  rotate: 10deg;
-	filter: blur(70px);
-  background: radial-gradient(circle at 50% 50%,rgba(77, 91, 206, 1), rgba(76, 0, 255, 0));
-  opacity: 0.5;
-  z-index: 10;
-}
-
-.css-blurry-gradient-green {
-  position: absolute;
-  top: 20%;
-  right: 30%;
-  width: 300px;
-  height: 300px;
-	border-radius: 0% 50% 0% 50%;
-	filter: blur(70px);
-  background: radial-gradient(circle at 50% 50%,rgba(67, 217, 173, 1), rgba(76, 0, 255, 0));
-  opacity: 0.5;
-  z-index: 10;
-}
-
-@media (min-width: 1024px) {
-
   .css-blurry-gradient-blue {
     position: fixed;
-    bottom: 10%;
-    right: 10%;
-    width: 500px;
-    height: 500px;
-    opacity: 0.7;
-    border-radius: 100% 50% 100% 0%;
+    bottom: 25%;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    border-radius: 0% 0% 50% 50%;
+    rotate: 10deg;
+    filter: blur(70px);
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(77, 91, 206, 1),
+      rgba(76, 0, 255, 0)
+    );
+    opacity: 0.5;
+    z-index: 10;
   }
 
   .css-blurry-gradient-green {
-    position: fixed;
-    top: 10%;
-    right: 35%;
-    filter: blur(100px);
-    rotate: 10deg;
-    width: 400px;
-    height: 400px;
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    width: 300px;
+    height: 300px;
+    border-radius: 0% 50% 0% 50%;
+    filter: blur(70px);
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(67, 217, 173, 1),
+      rgba(76, 0, 255, 0)
+    );
     opacity: 0.5;
-    border-radius: 100% 0% 0% 0%;
-    rotate: 20deg;
+    z-index: 10;
   }
-}
 
+  @media (min-width: 1024px) {
+    .css-blurry-gradient-blue {
+      position: fixed;
+      bottom: 10%;
+      right: 10%;
+      width: 500px;
+      height: 500px;
+      opacity: 0.7;
+      border-radius: 100% 50% 100% 0%;
+    }
+
+    .css-blurry-gradient-green {
+      position: fixed;
+      top: 10%;
+      right: 35%;
+      filter: blur(100px);
+      rotate: 10deg;
+      width: 400px;
+      height: 400px;
+      opacity: 0.5;
+      border-radius: 100% 0% 0% 0%;
+      rotate: 20deg;
+    }
+  }
 </style>

@@ -1,38 +1,43 @@
 ---
-import clsx from "clsx";
+import clsx from 'clsx'
 
-const {pathname} = Astro.url;
+const { pathname } = Astro.url
 ---
 
-
 <nav class="h-full min-w-[62px] border-r border-r-lines hidden md:block">
-    <ul class="flex flex-col items-center gap-7 pt-6">
-        <li>
-            <a href="/about-me/professional-info">
-                <img src="/icons/terminal-icon.svg" alt="professional info" class={clsx("h-[20px] w-[20px] opacity-40 hover:opacity-100", 
-                    {
-                        "!opacity-100": pathname.includes( "/about-me/professional-info")
-                    }
-                )}>
-            </a>
-        </li>
-        <li>
-            <a href="/about-me/personal-info">
-                <img src="/icons/circle-icon.svg" alt="about me" class={clsx("h-[20px] w-[20px] opacity-40 hover:opacity-100",
-                    {
-                     "!opacity-100": pathname.includes("/about-me/personal-info")
-                    }
-                )}>
-            </a>
-        </li>
-        <li>
-            <a href="/about-me/hobbies-info">
-                <img src="/icons/game-icon.svg" alt="/hobbies-info" class={clsx("h-[20px] w-[20px] opacity-40 hover:opacity-100", 
-                    {
-                        "!opacity-100": pathname.includes( "/about-me/hobbies-info")
-                    }
-                )}>
-            </a>
-        </li>
-    </ul>
+  <ul class="flex flex-col items-center gap-7 pt-6">
+    <li>
+      <a href="/about-me/professional-info">
+        <img
+          src="/icons/terminal-icon.svg"
+          alt="professional info"
+          class={clsx('h-[20px] w-[20px] opacity-40 hover:opacity-100', {
+            '!opacity-100': pathname.includes('/about-me/professional-info'),
+          })}
+        />
+      </a>
+    </li>
+    <li>
+      <a href="/about-me/personal-info">
+        <img
+          src="/icons/circle-icon.svg"
+          alt="about me"
+          class={clsx('h-[20px] w-[20px] opacity-40 hover:opacity-100', {
+            '!opacity-100': pathname.includes('/about-me/personal-info'),
+          })}
+        />
+      </a>
+    </li>
+    <li>
+      <a href="/about-me/hobbies-info">
+        <img
+          src="/icons/game-icon.svg"
+          alt="/hobbies-info"
+          class={clsx('h-[20px] w-[20px] opacity-40 hover:opacity-100', {
+            '!opacity-100': pathname.includes('/about-me/hobbies-info'),
+          })}
+        />
+      </a>
+    </li>
+  </ul>
 </nav>

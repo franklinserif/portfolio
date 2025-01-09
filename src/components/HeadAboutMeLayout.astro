@@ -7,22 +7,22 @@ const titles = getTitle(pathname)
 const [pageTitle, seconLevelPageTitle] = titles
 ---
 
-<div class="h-full flex flex-wrap md:flex-nowrap pt-3 md:pt-0">
-  <div class="h-full w-full md:w-[50%] flex-col">
+<div class="h-full flex flex-wrap xl:flex-nowrap pt-3 xl:pt-0">
+  <div class="h-full w-full xl:w-[50%] flex-col">
     <div
-      class="h-[35px] w-full flex items-center border-b md:border-b-lines md:border-r md:border-r-lines"
+      class="h-[35px] w-full flex items-center border-b-0 xl:border-b xl:border-b-lines xl:border-r xl:border-r-lines"
     >
       <section
-        class="h-full md:border-r md:border-r-lines px-4 box-content flex items-center"
+        class="h-full xl:border-r xl:border-r-lines px-4 box-content flex items-center"
       >
-        <span class="block md:hidden text-white mr-1">//</span>
-        <span class="text-white md:text-secondary text-snippets">
+        <span class="block xl:hidden text-white mr-1">//</span>
+        <span class="text-white xl:text-secondary text-snippets">
           {pageTitle}
         </span>
-        <span class="text-secondary text-snippets ml-2 hidden md:block">
+        <span class="text-secondary text-snippets ml-2 hidden xl:block">
           x
         </span>
-        <span class="block md:hidden text-secondary text-snippets ml-2">
+        <span class="block xl:hidden text-secondary text-snippets ml-2">
           / {seconLevelPageTitle}
         </span>
       </section>
@@ -31,9 +31,9 @@ const [pageTitle, seconLevelPageTitle] = titles
       <slot name="main-content" />
     </section>
   </div>
-  <div class="h-full w-full md:w-[50%]">
+  <div class="h-full w-full xl:w-[50%]">
     <div
-      class="h-[35px] flex items-center md:border-b md:border-b-lines pt-[2px]"
+      class="h-[35px] flex items-center xl:border-b xl:border-b-lines pt-[2px]"
     >
     </div>
     <slot name="aside-content" />

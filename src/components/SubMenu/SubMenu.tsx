@@ -17,7 +17,7 @@ const SubMenu: FC<Props> = ({ pathname }) => {
 
   return (
     <section className="min-w-[248px] border-r border-r-lines">
-      <nav className="hidden md:block">
+      <nav className="hidden xl:block">
         <div className="h-[35px] border-b border-b-lines flex items-center">
           <img
             src="/icons/white-arrow-icon.svg"
@@ -45,7 +45,7 @@ const SubMenu: FC<Props> = ({ pathname }) => {
           ))}
         </ul>
       </nav>
-      <nav className="block md:hidden w-full">
+      <nav className="block xl:hidden w-full">
         {subMenuList.map((item, index) => (
           <MobileSubMenu menu={item} pathname={pathname} key={item[0]} />
         ))}

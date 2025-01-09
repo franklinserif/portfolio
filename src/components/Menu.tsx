@@ -11,7 +11,7 @@ const Menu: FC<Props> = ({ pathname }) => {
 
   return (
     <nav>
-      <ul className="hidden lg:flex text-secondary items-center h-[50px] text-center text-snippets border-y border-y-lines">
+      <ul className="hidden xl:flex text-secondary items-center h-[50px] text-center text-snippets border-y border-y-lines">
         <li>
           <a
             href=""
@@ -78,7 +78,7 @@ const Menu: FC<Props> = ({ pathname }) => {
         </li>
       </ul>
 
-      <ul className="lg:hidden flex flex-wrap items-center justify-between text-secondary h-[64px] text-center text-snippets border-y border-y-lines">
+      <ul className="xl:hidden flex flex-wrap items-center justify-between text-secondary h-[64px] text-center text-snippets border-y border-y-lines">
         <li>
           <a
             href="/"

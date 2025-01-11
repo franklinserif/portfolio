@@ -1,0 +1,36 @@
+---
+import Layout from './Layout.astro'
+import IconsMenu from '@components/Icons-menu.astro'
+import SubMenu from '@components/SubMenu/SubMenu'
+import ResponsivePageTitle from '@components/ResponsivePageTitle.astro'
+import PageTitles from '@components/PageTitles.astro'
+import StaticScrollbar from '@components/StaticScrollbar.astro'
+import Aside from '@components/Aside.astro'
+
+const { pathname } = Astro.url
+---
+
+<Layout>
+  <section class="h-full w-full flex flex-col xl:flex-row">
+    <ResponsivePageTitle />
+    <IconsMenu />
+    <SubMenu client:only="react" pathname={pathname} />
+    <div class="w-full">
+      <PageTitles>
+        <section class="h-full w-full flex" slot="main-content">
+          <div class="w-full h-full">
+            <slot />
+          </div>
+          <div class="h-full">
+            <StaticScrollbar />
+          </div>
+        </section>
+        <div class="h-full" slot="aside-content">
+          <section class="w-full h-full">
+            <Aside />
+          </section>
+        </div>
+      </PageTitles>
+    </div>
+  </section>
+</Layout>

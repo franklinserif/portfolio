@@ -27,7 +27,7 @@ const SubMenu: FC<Props> = ({ pathname }) => {
           <h4 className="text-white text-snippets">{path}</h4>
         </div>
         <ul className="flex flex-col gap-3 ml-3 pt-3">
-          {menuList.map((item) => (
+          {menuList?.map((item) => (
             <SubMenuItem key={item.id} item={item} pathname={pathname} />
           ))}
         </ul>

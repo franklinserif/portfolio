@@ -1,6 +1,6 @@
 function getTitle(pathname: string): string[] {
   const splitTitle = pathname.split('/')
-  const title = splitTitle[2]
+  let title = splitTitle[2]
   let subTitle = splitTitle[3]
 
   if (subTitle === undefined && title == 'personal-info') {
@@ -9,9 +9,11 @@ function getTitle(pathname: string): string[] {
     subTitle = 'experience'
   } else if (subTitle === undefined && title === 'hobbies-info') {
     subTitle = 'sports'
+  } else if (pathname.split('/')[1] === 'contact-me') {
+    title = 'contact-me'
   }
 
-  return [splitTitle[2], subTitle]
+  return [title, subTitle]
 }
 
 export { getTitle }

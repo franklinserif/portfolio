@@ -1,7 +1,10 @@
 ---
 import ContactMeLayout from '@layouts/contactMeLayout.astro'
+import ContactMeForm from '@components/ContactMeForm'
 ---
 
 <ContactMeLayout>
-  <div>contact me</div>
+  <div>
+    <ContactMeForm client:only="react" />
+  </div>
 </ContactMeLayout>

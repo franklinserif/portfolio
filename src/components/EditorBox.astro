@@ -1,5 +1,16 @@
+---
+import { clsx } from 'clsx'
+
+const { pathname } = Astro.url
+---
+
 <body
-  class="flex flex-col bg-primary rounded-lg border-lines border xl:h-full w-full relative overflow-hidden"
+  class={clsx(
+    'flex flex-col bg-primary rounded-lg border-lines border xl:h-full w-full relative',
+    {
+      'h-full overflow-hidden': pathname === '/',
+    }
+  )}
 >
   <slot />
 </body>

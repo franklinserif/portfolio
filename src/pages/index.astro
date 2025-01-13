@@ -16,7 +16,7 @@ import WelcomeText from '@components/Welcome-Text.astro'
       <WelcomeText />
     </section>
     <section
-      class="w-[50%] h-full hidden lg:flex items-center ml-[10%] relative z-20"
+      class="w-[50%] h-full hidden lg:flex items-center ml-[10%] relative z-20 fade-in"
     >
       <SnakeGame client:only="vue" />
     </section>
@@ -81,6 +81,20 @@ import WelcomeText from '@components/Welcome-Text.astro'
       opacity: 0.5;
       border-radius: 100% 0% 0% 0%;
       rotate: 20deg;
+    }
+  }
+
+  .fade-in {
+    position: relative;
+    opacity: 0;
+    bottom: -150px;
+    animation: fadeInAnimation 0.7s forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+      bottom: 0;
     }
   }
 </style>

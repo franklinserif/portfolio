@@ -38,7 +38,7 @@ const TextComment: FC<Props> = ({ text }) => {
         ))}
       </div>
       <div
-        className="mt-5 text-secondary text-snippets pr-5 text-wrap h-fit"
+        className="mt-5 text-secondary text-snippets pr-5 text-wrap h-fit whitespace-pre-wrap"
         ref={elementRef}
       >
         {text}

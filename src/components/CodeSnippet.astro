@@ -10,14 +10,32 @@ interface Props {
 const { code } = Astro.props
 ---
 
-<section class="w-full flex flex-col justify-center px-0 *:xl:px-5">
-  <div class="flex items-center justify-between w-full mt-7">
-    <div class="">
-      <Avatar />
+<section class="px-0 *:xl:px-5 overflow-hidden">
+  <div class="w-full flex flex-col justify-center fade-in">
+    <div class="flex items-center justify-between w-full mt-7">
+      <div class="">
+        <Avatar />
+      </div>
+      <div class="">
+        <DetailsAndRating />
+      </div>
     </div>
-    <div class="">
-      <DetailsAndRating />
-    </div>
+    <Code client:only="react" code={code} />
   </div>
-  <Code client:only="react" code={code} />
 </section>
+
+<style>
+  .fade-in {
+    position: relative;
+    opacity: 0;
+    top: -150px;
+    animation: fadeInAnimation 0.7s forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+</style>

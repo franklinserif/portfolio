@@ -48,7 +48,7 @@ const Menu: FC<Props> = ({ pathname }) => {
             _about-me
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href="/projects"
             className={clsx(
@@ -61,7 +61,7 @@ const Menu: FC<Props> = ({ pathname }) => {
           >
             _projects
           </a>
-        </li>
+        </li> */}
         <li className="ml-auto">
           <a
             href="/contact-me"
@@ -129,7 +129,7 @@ const Menu: FC<Props> = ({ pathname }) => {
             >
               <a href="/about-me/personal-info">_about-me</a>
             </li>
-            <li
+            {/*      <li
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',
                 {
@@ -138,7 +138,7 @@ const Menu: FC<Props> = ({ pathname }) => {
               )}
             >
               <a href="/projects">_projects</a>
-            </li>
+            </li> */}
             <li
               className={clsx(
                 'h-[57px] w-full flex items-center pl-8 border-b border-b-lines',

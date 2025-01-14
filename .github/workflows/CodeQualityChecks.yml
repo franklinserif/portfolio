@@ -7,8 +7,8 @@ on:
       - develop
   pull_request:
     branches:
-      - develop
       - main
+      - develop
 
 jobs:
   prettier:
@@ -20,10 +20,23 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run Prettier
-        run: npx prettier --check .
+      - name: Run Prettier and check if there are any changes
+        run: |
+          npx prettier --write .
+          git diff --exit-code || echo "Code is formatted, committing changes."
+
+      - name: Commit and push changes if any
+        if: ${{ steps.prettier.outputs.changed == 'true' }}
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions@github.com"
+          git add .
+          git commit -m "chore: format code with Prettier"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

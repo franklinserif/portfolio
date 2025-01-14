@@ -19,7 +19,7 @@ export default {
       'accent-violet': '#C98BDF',
 
       lines: '#1E2D3D',
-
+      'button-hover': '#263b50',
       white: '#fff',
     },
     fontSize: {

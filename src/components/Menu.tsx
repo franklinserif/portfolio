@@ -11,7 +11,7 @@ const Menu: FC<Props> = ({ pathname }) => {
 
   return (
     <nav>
-      <ul className="hidden xl:flex text-secondary items-center h-[50px] text-center text-snippets border-y border-y-lines">
+      <ul className="hidden xl:flex text-secondary items-center h-[50px] text-center text-[13px] 2xl:text-snippets border-y border-y-lines">
         <li>
           <a
             href=""
@@ -147,7 +147,7 @@ const Menu: FC<Props> = ({ pathname }) => {
                 }
               )}
             >
-              <a href="">_contact-me</a>
+              <a href="/contact-me">_contact-me</a>
             </li>
           </ul>
         </li>

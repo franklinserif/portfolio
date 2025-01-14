@@ -13,7 +13,7 @@ const ContactMeForm: FC = () => {
   }
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center px-5 md:px-0">
       <form action="" className="flex flex-col max-w-[400px] w-full mt-16">
         <label htmlFor="name" className="text-snippets text-secondary mb-3">
           _name:
@@ -44,7 +44,7 @@ const ContactMeForm: FC = () => {
         />
         <button
           onClick={sendEmail}
-          className="bg-lines text-white text-small-letter py-2 px-3 rounded-md w-fit"
+          className="bg-lines hover:bg-button-hover transition-colors text-white text-small-letter py-2 px-3 rounded-md w-fit"
         >
           submit-message
         </button>

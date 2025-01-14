@@ -5,6 +5,8 @@
 the purpose of this project is make me visible and show some information about me. This project is inspire in the [Yanka Darelova](https://www.behance.net/darelova) portfolio design.
 you can find the original design in Figma [portfolio'design files](<https://www.figma.com/design/y2E1xYKlBi6buDol4eJyxE/Portfolio-for-Developers-Concept-V.2-(Community)?node-id=0-1&node-type=canvas&t=F4oV9k5mJ4PkyMas-0>)
 
+![portfolio](https://github.com/franklinsrr/portfolio/blob/main/public/og-image.png?raw=true)
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:

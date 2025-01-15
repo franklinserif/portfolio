@@ -125,7 +125,11 @@
         </div>
       </div>
       <!-- skip -->
-      <a id="skip-btn" href="/about-me" class="flex hover:bg-white/20">
+      <a
+        id="skip-btn"
+        href="/about-me/personal-info"
+        class="flex hover:bg-white/20"
+      >
         skip
       </a>
     </div>

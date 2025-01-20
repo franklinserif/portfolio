@@ -26,7 +26,7 @@ const TextComment: FC<Props> = ({ text }) => {
   }, [lines])
 
   return (
-    <div className="text-white flex gap-5 pt-5">
+    <div className="text-white flex gap-2 md:gap-5 pt-5">
       <div className="flex flex-col pl-5">
         {leftNumbers.map((lineSymbol) => (
           <div

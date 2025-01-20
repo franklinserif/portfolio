@@ -5,6 +5,11 @@ import Menu from '@components/Menu'
 import Footer from '@components/Footer.astro'
 import { type MenuOptions } from '@interfaces/menu'
 
+interface Props {
+  is404?: boolean
+}
+
+const { is404 = false } = Astro.props
 const { pathname } = Astro.url
 ---
 
@@ -48,7 +53,7 @@ const { pathname } = Astro.url
     <title>Franklin Rodriguez - FullStack Developer</title>
     <ClientRouter />
   </head>
-  <EditorBox>
+  <EditorBox is404={is404}>
     <Menu client:only="react" pathname={pathname as unknown as MenuOptions} />
     <main class="h-full pb-5 xl:pb-0">
       <slot />

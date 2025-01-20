@@ -1,6 +1,11 @@
 ---
 import { clsx } from 'clsx'
 
+interface Props {
+  is404?: boolean
+}
+
+const { is404 = false } = Astro.props
 const { pathname } = Astro.url
 ---
 
@@ -8,7 +13,7 @@ const { pathname } = Astro.url
   class={clsx(
     'flex flex-col bg-primary rounded-lg border-lines border xl:h-full w-full relative',
     {
-      'h-full overflow-hidden': pathname === '/',
+      'h-full overflow-hidden': pathname === '/' || is404,
     }
   )}
 >
